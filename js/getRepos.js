@@ -63,6 +63,10 @@ request.onload = function () {
             const wrapper2 = document.createElement('div')
             repoCard.setAttribute('class', 'languagewrapper')
 
+            const languagetext = document.createElement('p')
+            languagetext.setAttribute('class', 'repoinfotext')
+
+
             //Get repo language
             if(repo.language){
               if(repo.language === "JavaScript"){
