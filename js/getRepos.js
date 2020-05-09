@@ -19,6 +19,13 @@ function LoadImages() {
 }
 LoadImages()
 
+
+function GetFormattedDate(repodate) {
+    var month = repodate.getMonth()
+    var day = repodate.getDate()
+    var year = repodate.getFullYear()
+    return month + "/" + day + "/" + year;
+}
 // Open a new connection, using the GET request on the URL endpoint
 request.open('GET', 'https://api.github.com/users/mattbf/repos', true)
 
@@ -47,12 +54,15 @@ request.onload = function () {
             // Create a p and set the text content to the repo's description
             const p = document.createElement('p')
             p.setAttribute('class', 'repodesc')
-            repodescription = repo.description.substring(0, 300) // Limit to 300 chars
 
-            if(repo.description.length >= 300){
+            if(repo.description && repo.description.length >= 300){
+                repodescription = repo.description.substring(0, 300) // Limit to 300 chars
                 p.textContent = `${repodescription}...` // End with an ellipses
-            } else {
+            } else if(repo.description) {
+                repodescription = repo.description
                 p.textContent = `${repodescription}`
+            } else {
+              p.textContent = "No description"
             }
 
             //create repo info div
@@ -90,10 +100,12 @@ request.onload = function () {
             if(repo.updated_at){
               const updatedat = document.createElement('p')
               updatedat.setAttribute('class', 'repoinfotext.marginright')
-              date.textContent = "Update at: "
+              updatedat.textContent = "Update at: "
               const date = document.createElement('p')
               date.setAttribute('class', 'repoinfotext')
-              date.textContent = repo.updated_at.toDateString()
+              var repodate = new Date(repo.updated_at)
+              var stringDate = GetFormattedDate(repodate)
+              date.textContent = stringDate
               wrapper2.appendChild(updatedat)
               wrapper2.appendChild(date)
             }
