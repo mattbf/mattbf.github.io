@@ -77,9 +77,9 @@ request.onload = function () {
                 wrapper1.appendChild(HTMLImage)
                 languagetext.textContent = "HTML"
                 wrapper1.appendChild(languagetext)
-              } else (
-                //do not append a language or image
-              )
+              }
+              // no main language.. do not append a language or image
+
             }
 
             //get repo last updated date
