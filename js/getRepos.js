@@ -41,9 +41,10 @@ request.onload = function () {
 
             // Create an h3 and set the text content to the repo's title
             const title = document.createElement('h3')
-            title.setAttribute('class', 'repotitle')
+            //title.setAttribute('class', 'repotitle')
 
             const titleanchor = document.createElement('a')
+            titleanchor.setAttribute('class', 'repotitle')
             titleanchor.textContent = repo.name
             titleanchor.href = repo.html_url
             titleanchor.target="_blank"
@@ -67,11 +68,11 @@ request.onload = function () {
 
             //create repo info div
             const repoinfodiv = document.createElement('div')
-            repoCard.setAttribute('class', 'repoinfo')
+            repoinfodiv.setAttribute('class', 'repoinfo')
             const wrapper1 = document.createElement('div')
-            repoCard.setAttribute('class', 'languagewrapper')
+            wrapper1.setAttribute('class', 'languagewrapper')
             const wrapper2 = document.createElement('div')
-            repoCard.setAttribute('class', 'languagewrapper')
+            wrapper2.setAttribute('class', 'languagewrapper')
 
             const languagetext = document.createElement('p')
             languagetext.setAttribute('class', 'repoinfotext')
@@ -83,14 +84,17 @@ request.onload = function () {
                 wrapper1.appendChild(JSImage)
                 languagetext.textContent = "JavaScript"
                 wrapper1.appendChild(languagetext)
+                repoinfodiv.appendChild(wrapper1)
               } else if(repo.language === "Python") {
                 wrapper1.appendChild(PyImage)
                 languagetext.textContent = "Python"
                 wrapper1.appendChild(languagetext)
+                repoinfodiv.appendChild(wrapper1)
               } else if(repo.language === "HTML") {
                 wrapper1.appendChild(HTMLImage)
                 languagetext.textContent = "HTML"
                 wrapper1.appendChild(languagetext)
+                repoinfodiv.appendChild(wrapper1)
               }
               // no main language.. do not append a language or image
 
@@ -99,7 +103,8 @@ request.onload = function () {
             //get repo last updated date
             if(repo.updated_at){
               const updatedat = document.createElement('p')
-              updatedat.setAttribute('class', 'repoinfotext.marginright')
+              updatedat.setAttribute('class', 'repoinfotext')
+              updatedat.classList.add('marginright')
               updatedat.textContent = "Update at: "
               const date = document.createElement('p')
               date.setAttribute('class', 'repoinfotext')
@@ -108,17 +113,8 @@ request.onload = function () {
               date.textContent = stringDate
               wrapper2.appendChild(updatedat)
               wrapper2.appendChild(date)
-            }
-
-
-            //construct repo information div
-            if(repo.language){
-              repoinfodiv.appendChild(wrapper1)
-            }
-            if(repo.updated_at){
               repoinfodiv.appendChild(wrapper2)
             }
-
 
             // Append content to the repo card element
             repoCard.appendChild(title)
