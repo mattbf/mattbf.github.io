@@ -7,7 +7,7 @@
 }
 
 .body {
-  background-color: #fffcf7;
+  background-color: #fcfcfc;
 }
 
 .sidebar {
@@ -29,7 +29,8 @@
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: #fcfcfc;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #fffcf7;
 }
 
 .avatar {
@@ -40,6 +41,7 @@
   overflow: hidden;
   width: 100px;
   height: 100px;
+  margin-bottom: 30px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -54,6 +56,11 @@
   -ms-flex-align: center;
   align-items: center;
   border-radius: 100%;
+}
+
+.avatarphoto {
+  width: 150%;
+  max-width: 150%;
 }
 
 .socialblock {
@@ -86,7 +93,8 @@
 }
 
 .socialicon {
-  width: 100%;
+  width: 25px;
+  height: 25px;
 }
 
 .portfoliowrapper {
@@ -121,21 +129,69 @@
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 15px;
-  border: 3px solid #000;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #333;
   border-radius: 6px;
+  background-color: #fffcf7;
 }
 
 .underline {
   width: 100%;
   height: 1px;
   background-color: #444;
+  opacity: 0.3;
+}
+
+.underline.short {
+  width: 50%;
+  margin-right: 15px;
 }
 
 .repotitle {
   display: block;
   margin-bottom: 15px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: Volkhov, sans-serif;
+  color: #164cff;
   font-size: 18px;
+  font-weight: 700;
+}
+
+.repodesc {
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.h4 {
+  font-family: Volkhov, sans-serif;
+  color: #000;
+}
+
+.h2 {
+  margin-top: 0px;
+  font-family: 'Source Code Pro', sans-serif;
+  color: #000;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+}
+
+.h1 {
+  margin-bottom: 10px;
+  font-family: Volkhov, sans-serif;
+  color: #000;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.subheading {
+  margin-top: 20px;
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 991px) {
@@ -214,3 +270,4 @@
     padding: 20px;
   }
 }
+
