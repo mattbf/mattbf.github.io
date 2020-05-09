@@ -28,8 +28,12 @@ request.onload = function () {
             const p = document.createElement('p')
             p.setAttribute('class', 'repodesc')
             repodescription = repo.description.substring(0, 300) // Limit to 300 chars
-            p.textContent = `${repodescription}...` // End with an ellipses
-
+            
+            if(repo.description.length >= 300){
+                p.textContent = `${repodescription}...` // End with an ellipses
+            } else {
+                p.textContent = `${repodescription}`
+            }
             // Append content to the repo card element
             repoCard.appendChild(title)
             repoCard.appendChild(p)
