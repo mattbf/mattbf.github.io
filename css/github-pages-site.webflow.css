@@ -151,11 +151,14 @@
 
 .repotitle {
   display: block;
+  margin-top: 0px;
   margin-bottom: 15px;
   font-family: Volkhov, sans-serif;
   color: #164cff;
   font-size: 18px;
+  line-height: 20px;
   font-weight: 700;
+  text-decoration: underline;
 }
 
 .repodesc {
@@ -203,13 +206,13 @@
   text-align: center;
 }
 
-.link {
+.footerlinktext {
   -webkit-transition: all 125ms cubic-bezier(.55, .085, .68, .53);
   transition: all 125ms cubic-bezier(.55, .085, .68, .53);
   color: grey;
 }
 
-.link:hover {
+.footerlinktext:hover {
   color: #164cff;
 }
 
