@@ -1,23 +1,18 @@
-# Foobar
+# Github Portfolio
 
-Foobar is a Python library for dealing with word pluralization.
+This is Matthew Behan-Fossey's Github Portfolio. It includes up to date private repositories of what I'm working on.
 
-## Installation
+## Other works
+[personal website](link)
+[dribbble portfolio](https://dribbble.com/matthewbf)
+[twitter](link)
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+## Make your own Portfolio
+
+This portfolio is hosted by [Github Pages](https://pages.github.com/). Clone this repository to make your own.
 
 ```bash
-pip install foobar
-```
-
-## Usage
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+git clone https://github.com/mattbf/mattbf.github.io.git
 ```
 
 ## Contributing
@@ -26,4 +21,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+This repository is licensed under the [MIT](https://choosealicense.com/licenses/mit/) license. Feel free to clone, copy, and use for your own portfolio. I just ask that you credit me, [mattbf](https://github.com/mattbf) in your making of.
