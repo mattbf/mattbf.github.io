@@ -7,5 +7,210 @@
 }
 
 .body {
-  background-color: #574fff;
+  background-color: #fffcf7;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 99;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+  height: 100%;
+  padding: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #fcfcfc;
+}
+
+.avatar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.socialblock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.socialbutton {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  opacity: 0.6;
+  -webkit-transition: all 125ms cubic-bezier(.47, 0, .745, .715);
+  transition: all 125ms cubic-bezier(.47, 0, .745, .715);
+  cursor: pointer;
+}
+
+.socialbutton:hover {
+  opacity: 1;
+}
+
+.socialicon {
+  width: 100%;
+}
+
+.portfoliowrapper {
+  width: 75%;
+  margin-left: auto;
+  padding: 50px;
+}
+
+.reposwrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.repo {
+  width: 46%;
+  min-height: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 3px solid #000;
+  border-radius: 6px;
+}
+
+.underline {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+}
+
+.repotitle {
+  display: block;
+  margin-bottom: 15px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 991px) {
+  .sidebar {
+    position: static;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .socialblock {
+    margin-top: 20px;
+  }
+  .profile {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .portfoliowrapper {
+    width: 100%;
+  }
+  .h2 {
+    margin-top: 5px;
+    text-align: center;
+  }
+  .h1 {
+    margin-bottom: 4px;
+    text-align: center;
+  }
+  .subheading {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    padding: 30px;
+  }
+  .portfoliowrapper {
+    padding: 30px;
+  }
+  .repo {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .sidebar {
+    padding: 20px;
+  }
+  .portfoliowrapper {
+    padding: 20px;
+  }
 }
