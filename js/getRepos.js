@@ -14,13 +14,19 @@ request.onload = function () {
             repoCard.setAttribute('class', 'repo')
 
             // Create an h3 and set the text content to the repo's title
-            const title = document.createElement('link')
-            title.textContent = repo.name
-            title.href = repo.html_url
+            const title = document.createElement('h3')
+            title.setAttribute('class', 'repotitle')
+
+            const titleanchor = document.createElement('a')
+            titleanchor.textContent = repo.name
+            titleanchor.href = repo.html_url
+
+            // Pur the repo title as a link inside the heading
+            title.appendChild(titleanchor)
 
             // Create a p and set the text content to the repo's description
             const p = document.createElement('p')
-            repoCard.setAttribute('class', 'repodesc')
+            p.setAttribute('class', 'repodesc')
             repodescription = repo.description.substring(0, 300) // Limit to 300 chars
             p.textContent = `${repodescription}...` // End with an ellipses
 
