@@ -20,6 +20,7 @@ request.onload = function () {
             const titleanchor = document.createElement('a')
             titleanchor.textContent = repo.name
             titleanchor.href = repo.html_url
+            titleanchor.target="_blank"
 
             // Pur the repo title as a link inside the heading
             title.appendChild(titleanchor)
@@ -28,7 +29,7 @@ request.onload = function () {
             const p = document.createElement('p')
             p.setAttribute('class', 'repodesc')
             repodescription = repo.description.substring(0, 300) // Limit to 300 chars
-            
+
             if(repo.description.length >= 300){
                 p.textContent = `${repodescription}...` // End with an ellipses
             } else {
