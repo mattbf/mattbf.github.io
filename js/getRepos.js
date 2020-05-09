@@ -29,7 +29,7 @@ request.onload = function () {
             repoCard.appendChild(p)
 
             // Append the card to the div with "Cards-Container" id
-            document.getElementById("Repos-Wrapper").appendChild(card);
+            document.getElementById("Repos-Wrapper").appendChild(repoCard);
         })
     } else {
         console.log('error')
