@@ -8,27 +8,6 @@ PyImage.setAttribute('class', 'languageimage')
 var HTMLImage = new Image(20,20);
 HTMLImage.setAttribute('class', 'languageimage')
 
-var newJSImg = new Image(20,20);
-var newPyImg = new Image(20,20);
-var newHTMLImg = new Image(20,20);
-
-//upon laoding the images set the dummy images source
-newJSImg.onload = function() {
-    JSImage.src = this.src;
-}
-newJSImg.src = "images/javascript.png";
-
-newPyImg.onload = function() {
-    PyImage.src = this.src;
-}
-newPyImg.src = "images/python.png";
-
-newHTMLImg.onload = function() {
-    HTMLImage.src = this.src;
-}
-newHTMLImg.src = "images/html.png";
-
-
 // function LoadImages() {
 //
 //     var JSImage = new Image(20,20);
@@ -129,7 +108,25 @@ request.onload = function () {
 
               }
 
+              var newJSImg = new Image(20,20);
+              var newPyImg = new Image(20,20);
+              var newHTMLImg = new Image(20,20);
 
+              //upon laoding the images set the dummy images source
+              newJSImg.src = "images/javascript.png";
+              newJSImg.onload = function() {
+                  JSImage.src = this.src;
+              }
+
+              newPyImg.src = "images/python.png";
+              newPyImg.onload = function() {
+                  PyImage.src = this.src;
+              }
+
+              newHTMLImg.src = "images/html.png";
+              newHTMLImg.onload = function() {
+                  HTMLImage.src = this.src;
+              }
             }
 
             //get repo last updated date
