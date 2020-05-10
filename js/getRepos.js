@@ -1,23 +1,49 @@
 var request = new XMLHttpRequest()
 
-var JSImage;
-var PyImage;
-var HTMLImage;
+//set images var code languages
+var JSImage = new Image(20,20);
+JSImage.setAttribute('class', 'languageimage')
+var PyImage = new Image(20,20);
+PyImage.setAttribute('class', 'languageimage')
+var HTMLImage = new Image(20,20);
+HTMLImage.setAttribute('class', 'languageimage')
 
-function LoadImages() {
-    JSImage = new Image(20,20);
-    JSImage.src = "images/javascript.png";
-    JSImage.setAttribute('class', 'languageimage')
+var newJSImg = new Image(20,20);
+var newPyImg = new Image(20,20);
+var newHTMLImg = new Image(20,20);
 
-    PyImage = new Image(20,20);
-    PyImage.src = "images/python.png";
-    PyImage.setAttribute('class', 'languageimage')
-
-    HTMLImage = new Image(20,20);
-    HTMLImage.src = "images/html.png";
-    HTMLImage.setAttribute('class', 'languageimage')
+//upon laoding the images set the dummy images source
+newJSImg.onload = function() {
+    JSImage.src = this.src;
 }
-LoadImages()
+newJSImg.src = "images/javascript.png";
+
+newPyImg.onload = function() {
+    PyImage.src = this.src;
+}
+newPyImg.src = "images/python.png";
+
+newHTMLImg.onload = function() {
+    HTMLImage.src = this.src;
+}
+newHTMLImg.src = "images/html.png";
+
+
+// function LoadImages() {
+//
+//     var JSImage = new Image(20,20);
+//     JSImage.src = "images/javascript.png";
+//     JSImage.setAttribute('class', 'languageimage')
+//
+//     PyImage = new Image(20,20);
+//     PyImage.src = "images/python.png";
+//     PyImage.setAttribute('class', 'languageimage')
+//
+//     HTMLImage = new Image(20,20);
+//     HTMLImage.src = "images/html.png";
+//     HTMLImage.setAttribute('class', 'languageimage')
+// }
+// LoadImages()
 
 
 function GetFormattedDate(repodate) {
@@ -81,22 +107,28 @@ request.onload = function () {
             //Get repo language
             if(repo.language){
               if(repo.language === "JavaScript"){
+                console.log(repo.name + " is written in language: " + repo.language)
                 wrapper1.appendChild(JSImage)
                 languagetext.textContent = "JavaScript"
                 wrapper1.appendChild(languagetext)
                 repoinfodiv.appendChild(wrapper1)
               } else if(repo.language === "Python") {
+                console.log(repo.name + " is written in language: " + repo.language)
                 wrapper1.appendChild(PyImage)
                 languagetext.textContent = "Python"
                 wrapper1.appendChild(languagetext)
                 repoinfodiv.appendChild(wrapper1)
               } else if(repo.language === "HTML") {
+                console.log(repo.name + " is written in language: " + repo.language)
                 wrapper1.appendChild(HTMLImage)
                 languagetext.textContent = "HTML"
                 wrapper1.appendChild(languagetext)
                 repoinfodiv.appendChild(wrapper1)
+              } else {
+                // no main language.. do not append a language or image
+
               }
-              // no main language.. do not append a language or image
+
 
             }
 
