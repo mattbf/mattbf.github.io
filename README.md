@@ -3,7 +3,7 @@
 This is Matthew Behan-Fossey's Github Portfolio. It includes up to date private repositories of what I'm working on.
 
 ## Other works
-[Personal website](link)  
+[Personal website](https://mattbf.github.io/)  
 
 [Dribbble portfolio](https://dribbble.com/matthewbf)  
 
